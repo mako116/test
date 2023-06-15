@@ -17,9 +17,9 @@ const SearchBar = () => {
         <form>
                <div className='  form__group form__group-fast'>
             <span><i className='ri-map-pin-line'></i></span>
-           <div>
+           <div className="form">
            {/* onChange={hanlesearch} */}
-            <input type="text" placeholder='where are you going?' />
+            <input type="text" placeholder='find jobs' />
                 <button className="" type='submit'>search</button>
            </div>
         </div>

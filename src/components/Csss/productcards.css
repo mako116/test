@@ -76,3 +76,100 @@ padding-right: 100px;
     width: 30%;
  
 }
+.desam{
+  display: flex;
+   margin-top: 5px;
+}
+.desam span{
+  margin: 10px;
+   color: #252525;
+}
+
+.dif h2{
+  color: black;
+  font-size: 45px;
+  letter-spacing: 9px;
+}
+.flexi{
+  display: flex;
+  padding: 30px 150px;
+   color: #000;
+   border: 1px solid #252525;
+}
+.flexi span,
+.flexi p{
+  font-family: "works",sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  color: #252525;
+}
+.skills{
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.madd{
+  margin-top: 30px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom:1px solid #252525
+}
+.buts{
+  margin-top: 40px;
+}
+.buts button{
+  width: 120px;
+  padding: 15px;
+  border: none;
+  font-size: 17px;
+  border-radius: 5px;
+  color: #e4e2e2;
+  background: #5230ec;
+}
+.der{
+  margin-top: 10px;
+}
+.der span{
+  margin-left: 20px;
+}
+.der span:nth-child(1){
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 5px;
+  background: #5230ec;
+  color: #e4e2e2;
+}
+.price{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.salary{
+  padding: 5px;
+}
+@media(max-width:768px){
+  .wisths{
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .items{
+    display: none;
+  }
+  .post{
+    display: none;
+  }
+  .imagin img{
+    width: 120px;
+}
+.flexi{
+  width: 100%;
+  display: flex;
+  padding: 30px 50px;
+}
+.dif h2{
+ font-size: 20px;
+}
+}

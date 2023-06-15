@@ -8,11 +8,13 @@ import {Route , Routes, Navigate} from 'react-router-dom'
 // import SearchResult from '../pages/SearchResult'
 // import ThankYou from '../pages/ThankYou'
 import Homes from '../components/Home/Homes'
+import ProductDetails from '../components/Pages/ProductDetails'
 const Routers = () => {
   return (
     <Routes>
         <Route path='/' element={<Navigate to="/home"/>}/>
         <Route path='/home' element={<Homes/>}/>
+        <Route path='/shop/:id' element={<ProductDetails/>}/>
         {/* <Route path='/tours' element={<Tours/>}/>
         <Route path='/tours/:id' element={<ToursDetails/>}/>
         <Route path='/login' element={<Login/>}/>

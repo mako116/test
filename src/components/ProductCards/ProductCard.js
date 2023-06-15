@@ -7,12 +7,12 @@ const ProductCard = ({item}) => {
       <section className='wisths'>
         <div className="spacer">
              <div className="imagin">
-                <Link>
+                <Link to={`/shop/${item.id}`}>
                 <img className="" src={item.img} alt="" />
                 </Link>
                 <div>
                <p>{item.new}</p>
-               <Link>
+               <Link to={`/shop/${item.id}`}>
                <h2>{item.title}</h2>
                </Link>
                <h4>{item.para}</h4>

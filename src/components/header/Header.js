@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import {Row, Container} from "reactstrap"
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './header.css'
 const nav__links=[
     {
@@ -19,10 +19,22 @@ const nav__links=[
         path:'/testimonials',
         display:'Testimonials'
     },
+    {
+        path:'/login',
+        display:'Login'
+    },
+    {
+        path:'/register',
+        display:'Register'
+    },
    
 ]
 const Header = () => {
+    const menuRef = useRef(null)
+
     const headerRef = useRef(null)
+
+    const menuToggle = () => menuRef.current.classList.toggle('active__menu')
 
     const stickyHeaderFunc = ()=>{
         window.addEventListener("scroll",()=>{
@@ -46,33 +58,26 @@ const Header = () => {
             <div className='nav_wrapper'>
                 <div className='logo'>
                <h1>Tjtek</h1>
-               <i></i>
-                </div>
-                <div className="nav_wrapper">
-                <div className="navigation">
-                    <ul className="menu d-flex align-items-center gap-5">
-                    {nav__links.map((item, index)=>(
-                        <li className='nav__item' key={index}>
-                        <NavLink to={item.path} className={navClass=> navClass.isActive ? 'active__link' : " "}>{item.display}</NavLink>
-                        </li>
-                    ))}
-                    </ul>
-                </div>
-
-                <div className="nav__right d-flex align-items-center gap-4">
-                    <div className="nav__btns d-flex align-items-center gap-4">
-                    <button className='btn secondary__btn'><Link to="/login">Login</Link>
-                    </button>
-                    <button className='btn secondary__btn'><Link to="/register">Register</Link>
-                    </button>
-                    </div>
-                    <span className='mobile__menu'>
-                    <i className="ri-menu-line"></i>
-                    </span>
-                </div>
+                 </div>
+                 <div className="navigation" ref={menuRef} onClick={menuToggle}>
+                   <ul className="menu">
+                 {
+                nav__links.map((item, index )=>(
+                    <li className='nav__item' key={index}>
+                    <NavLink to={item.path} 
+                    className={(navClass)=> navClass.isActive ? 'nav__active' : ''}>
+                    {item.display}</NavLink>
+                    </li>
+                )) }
+        </ul>
+    </div>
+    <div className="mobile__menu">
+        <span onClick={menuToggle}>
+        Hamburger
+        </span>
+        </div>
             </div>
-            </div>
-        </Row>
+         </Row>
       </Container>
     </header>
   )
